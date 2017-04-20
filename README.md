@@ -1,7 +1,26 @@
 # UnproductiveChatClient
 
+Unproductive Chat is a chat client thats made to simply distract you from being productive.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
+## Prerequisites
+
+Make sure you have the following:
+* [Angular CLI](https://github.com/angular/angular-cli)
+* [Pusher Account](https://pusher.com/signup)
+* [UnproductiveChatServer](https://github.com/xTrebliG/unproductive-chat-server)
+
+Be sure to add your Pusher App ID, Key and Secret to api.js:
+```
+// ..routes/api.js
+
+const pusher = new Pusher({
+    appId: 'ADD_APP_ID_HER'E,
+    key: 'ADD_KEY_HERE',
+    secret: 'ADD_SECRET_HERE'
+});
+```
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
