@@ -6,9 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
-import { PusherService } from './pusher.service';
+import { PusherService } from './services/pusher.service';
+import { MessageService } from './services/message.service'
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { Message } from './models/message';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,11 @@ import { FooterComponent } from './footer/footer.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PusherService],
+  providers: [
+    PusherService,
+    MessageService,
+    Message
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
